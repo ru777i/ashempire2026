@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('progression_apprenant_modules', function (Blueprint $table) {
+            $table->id();
+
+
+            $table->foreignId('inscription_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('module_id')->constrained()->cascadeOnDelete();
+            $table->enum('statut', ['NON_COMMENCE', 'EN_COURS', 'VALIDÉ'])->default('NON_COMMENCE');
+            $table->date('date_debut')->nullable();
+            $table->date('date_fin')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('progression_apprenant_modules');
+    }
+};
