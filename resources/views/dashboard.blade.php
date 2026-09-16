@@ -1,8 +1,8 @@
-@if (Auth::user()->role =='secretaire')
+@if (Auth::user()->role == 'secretaire')
 
 
     <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
-        <div class="div"> <livewire:notifications-bell /></div>
+        {{-- <div class="div"> <livewire:notifications-bell /></div> --}}
 
         <div class="grid auto-rows-min gap-4 md:grid-cols-4">
             <div class="rounded-xl bg-white ring-1 ring-emerald-950/5 shadow-sm p-5">
@@ -169,10 +169,10 @@
     </div>
 @endif
 
-@if (Auth::user()->role =='formateur')
+@if (Auth::user()->role == 'formateur')
 
     <div>
-        <div class="div"> <livewire:notifications-bell /></div>
+        {{-- <div class="div"> <livewire:notifications-bell /></div> --}}
 
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
 
@@ -411,7 +411,7 @@
 
 @if (Auth::user()->role == 'apprenant')
     <div class="space-y-6">
-        <div class="div"> <livewire:notifications-bell /></div>
+        {{-- <div class="div"> <livewire:notifications-bell /></div> --}}
         {{-- ===================== Statistiques ===================== --}}
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
 

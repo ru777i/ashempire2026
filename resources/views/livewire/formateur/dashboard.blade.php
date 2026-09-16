@@ -1,5 +1,5 @@
 <div>
- <div class="div">  <livewire:notifications-bell /></div>
+ {{-- <div class="div">  <livewire:notifications-bell /></div> --}}
 
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
 

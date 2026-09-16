@@ -1,5 +1,5 @@
 <div class="space-y-6">
- <div class="div">  <livewire:notifications-bell /></div>
+ {{-- <div class="div">  <livewire:notifications-bell /></div> --}}
     {{-- ===================== Statistiques ===================== --}}
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
 

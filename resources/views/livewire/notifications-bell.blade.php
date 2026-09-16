@@ -1,4 +1,4 @@
-<div class="relative" x-data="{ ouvert: false }">
+{{-- <div class="relative" x-data="{ ouvert: false }">
     <button @click="ouvert = !ouvert" @click.outside="ouvert = false"
         class="relative flex items-center justify-center w-9 h-9 rounded-full hover:bg-emerald-50 transition-colors">
         <flux:icon.bell class="w-5 h-5 text-zinc-500" />
@@ -26,7 +26,7 @@
                 <div wire:click="marquerCommeLue('{{ $notification->id }}')"
                     @class([
                         'p-3 cursor-pointer hover:bg-emerald-50/60 transition-colors',
-                        'bg-emerald-50/40' => is_null($notification->read_at),
+                        // 'bg-emerald-50/40' => is_null($notification->read_at),
                     ])>
                     <p class="text-sm font-medium text-zinc-800">{{ $notification->data['titre'] ?? 'Notification' }}
                     </p>
@@ -38,4 +38,4 @@
             @endforelse
         </div>
     </div>
-</div>
+</div> --}}

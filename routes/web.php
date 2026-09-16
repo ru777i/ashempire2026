@@ -32,11 +32,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('home');
 
-// Route::prefix('{current_team}')
-//     ->middleware(['auth', 'verified', EnsureTeamMembership::class])
-//     ->group(function () {
-//         Route::get('dashboard', Dashboard::class)->name('dashboard');
-//     });
+  Route::get('/{current_team}/dashboard', Dashboard::class)->name('dashboard1');
  Route::get('dashboard', Dashboard::class)->name('dashboard');
 Route::middleware(['auth'])->group(function () {
     Route::livewire('invitations/{invitation}/accept', 'pages::teams.accept-invitation')->name('invitations.accept');
